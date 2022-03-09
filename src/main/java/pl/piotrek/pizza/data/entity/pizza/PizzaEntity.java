@@ -1,7 +1,10 @@
 package pl.piotrek.pizza.data.entity.pizza;
 
 
+import pl.piotrek.pizza.data.entity.size.SizeEntity;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "pizzas")
@@ -16,7 +19,7 @@ public class PizzaEntity {
     private  String name;
 
     //jedna pizza ma wiele rozmiarów
-    @OneToMany(mappedBy = "pizza", orhanRemoval = true)
-    private Set<SizeEntity> sizes;
+    @OneToMany(mappedBy = "pizza", orphanRemoval = true)
+    private Set<SizeEntity> size;
 
 }

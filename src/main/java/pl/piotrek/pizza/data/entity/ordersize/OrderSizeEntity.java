@@ -24,11 +24,11 @@ public class OrderSizeEntity {
     private Integer sizeCount;
 
     @ManyToOne
-    @JoinColumn(name = "order_id", insertable = false, updetable = false)
+    @JoinColumn(name = "order_id", insertable = false, updatable = false )
     private OrderEntity order;
 
     @ManyToOne
-    @JoinColumn(name = "size_id", insertable = false, updetable = false)
+    @JoinColumn(name = "size_id", insertable = false, updatable = false)
     private OrderEntity size;
 
 

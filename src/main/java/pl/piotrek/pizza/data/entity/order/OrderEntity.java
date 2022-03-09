@@ -1,10 +1,12 @@
 package pl.piotrek.pizza.data.entity.order;
 
 
-import org.hibernate.mapping.Set;
 import pl.piotrek.pizza.data.entity.ordersize.OrderSizeEntity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "orders")
@@ -19,7 +21,7 @@ public class OrderEntity {
     private  String client_name;
 
     @Column(name = "client_address")
-    private  BigDecimal client_address;
+    private BigDecimal client_address;
 
     @Column(name = "floor")
     private Integer floor;

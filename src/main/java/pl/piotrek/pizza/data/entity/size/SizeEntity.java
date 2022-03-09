@@ -5,6 +5,7 @@ import pl.piotrek.pizza.data.entity.ordersize.OrderSizeEntity;
 import pl.piotrek.pizza.data.entity.pizza.PizzaEntity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "sizes")
@@ -19,7 +20,7 @@ public class SizeEntity {
     private  String size_type;
 
     @Column(name = "price_base")
-    private  BigDecimal priceBase;
+    private BigDecimal priceBase;
 
     @Column(name = "pizza_id")
     private Integer pizzaId;
@@ -28,7 +29,7 @@ public class SizeEntity {
     private Set<OrderSizeEntity> orderSizes;
 
     @OneToMany
-    @JoinColumn(name = "pizza_id", insertable = false, updatalbe = false)
+    @JoinColumn(name = "pizza_id", insertable = false, updatable = false)
     private PizzaEntity pizza;
 
 
