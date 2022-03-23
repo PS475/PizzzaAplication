@@ -20,6 +20,10 @@ public class PizzaEntity {
 
     //jedna pizza ma wiele rozmiarów
     @OneToMany(mappedBy = "pizza", orphanRemoval = true)
-    private Set<SizeEntity> size;
+    private Set<SizeEntity> sizes;
 
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

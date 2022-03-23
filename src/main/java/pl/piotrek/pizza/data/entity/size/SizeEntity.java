@@ -6,6 +6,7 @@ import pl.piotrek.pizza.data.entity.pizza.PizzaEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Set;
 
 @Entity
 @Table(name = "sizes")
@@ -31,6 +32,4 @@ public class SizeEntity {
     @OneToMany
     @JoinColumn(name = "pizza_id", insertable = false, updatable = false)
     private PizzaEntity pizza;
-
-
 }

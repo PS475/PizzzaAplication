@@ -1,5 +1,6 @@
 package pl.piotrek.pizza.remote.rest.api;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,7 @@ public class OrderControler {
                                             @RequestHeader("Access-Token") String token){
         return ResponseEntity.ok(null);
     }
+
     @PutMapping("/{order-id}")
     public ResponseEntity<OrderDto> upgradeOrder(@RequestHeader("Access-Token")String token,
                                                  @PathVariable("order-id") Integer orderId,
